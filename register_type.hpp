@@ -75,10 +75,10 @@ class RegisterTypeAbstract final {
     }
     inline void setAllDefaults() noexcept {
       m_Value =
-          std::underlying_type<BitMaskDefault>::type(BitMaskDefault::AllBits);
+          typename std::underlying_type<BitMaskDefault>::type(BitMaskDefault::AllBits);
     }
     inline void setAllBits() noexcept {
-      m_Value = std::underlying_type<BitMask>::type(BitMask::AllBits);
+      m_Value = typename std::underlying_type<BitMask>::type(BitMask::AllBits);
     }
     inline void clearAllBits() noexcept { m_Value = 0; }
     static_assert(std::is_same<RegisterType, Register8BitType>::value ||
