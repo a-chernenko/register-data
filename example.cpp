@@ -82,7 +82,7 @@ using SyncCtrl_Reg = Register32BitTypeAbstract<
     Detail::SyncCtrl_RegBits, decltype(Detail::SyncCtrl_RegAddr),
     Detail::SyncCtrl_RegAddr>;
 
-int main([[maybe_unused]] int argc, [[maybe_unused]] char *argv[]) try {
+int main(int argc, char *argv[]) try {
   SyncCtrl_Reg sync_ctrl_reg{};
 
   std::cout << "sync_ctrl_reg:\n" << std::hex;
